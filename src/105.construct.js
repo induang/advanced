@@ -12,9 +12,9 @@ const buildTree = function(preorder, inorder) {
 		if(start === end) return root;
 		
 		let rootIndex = start;
-		while(inorder[rootIndex] === rootVal) rootIndex++;
+		while(inorder[rootIndex] !== rootVal) rootIndex++;
 
-		const nextNodeVal = preorder[preorder.length-1];
+		const nextNodeVal = preorder[0];
 		let isNextLeft = false;
 		for(let i = start; i < rootIndex; i++){
 			if(inorder[i] === nextNodeVal){
