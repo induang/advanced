@@ -12,4 +12,4 @@ const detectCycle = function(head) {
 	else return cnt; 
 };
 
-console.log('')
+console.log(detectCycle)
